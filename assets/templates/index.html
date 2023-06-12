@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <link rel= "stylesheet" type= "text/css" href="/assets/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <meta charset="utf-8">
+    <title>ציטוט אקראי</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
+</head>
+<body>
+    <br>
+    {% for quote_line in quote_lines %}
+        <div> {{ quote_line|safe }} </div>
+    {% endfor %}
+</body>
+</html>
