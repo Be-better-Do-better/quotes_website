@@ -8,7 +8,6 @@ from classes.quote import Quote
 from auxiliary.utils import DEFAULT_QUOTEE, QUOTE_PATTERN, SYS_SEPERATOR  # QUOTE_WITH_TRANSLATION_PATTERN
 
 COMPILED_QUOTE_PATTERN = re.compile(QUOTE_PATTERN)
-# COMPILED_QUOTE_WITH_TRANSLATION_PATTERN = re.compile(QUOTE_WITH_TRANSLATION_PATTERN)
 
 
 class Quotes(object):
@@ -34,14 +33,6 @@ class Quotes(object):
 			self.quotes.append(self.extract_quote(full_quote))
 
 	def extract_quote(self, full_quote):
-		"""
-		if re.match(QUOTE_WITH_TRANSLATION_PATTERN, full_quote):
-			m = re.match(QUOTE_WITH_TRANSLATION_PATTERN, full_quote)
-			quote_in_source_language = m.group(1)
-			quote = m.group(2)
-			quotee_and_source = m.group(3)
-		"""
-		# full_quote_lines = full_quote.split('\r\n')
 		full_quote_lines = full_quote.split(SYS_SEPERATOR)
 		quote_lines = []
 		quotee_and_source = DEFAULT_QUOTEE
