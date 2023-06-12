@@ -5,13 +5,11 @@ app = Flask(__name__,
             static_folder='./assets/',
             template_folder='./assets/templates/')
 
-# quotes = Quotes('./assets/data/quotes_short.txt')
+
 quotes = Quotes('./assets/data/quotes.txt')
 
 @app.route('/', methods=['GET'])
 def home():
-
-	# quotes = Quotes('./assets/data/quotes.txt')
 	selected_quote = quotes.pick_random_quote()
 	quote_text = str(selected_quote)
 	quote_lines = quote_text.split('\n')
